@@ -5,9 +5,34 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="estilos.css">
+	<script src="js/script.js"></script>
 </head>
 <body>
-	<div id="resultat"></div>
-	<script src="js/script.js"></script>
+	<div class="header">
+		<div class="selectorJSON">
+			<label for="selectorJSON">JSON : </label>
+			<select id="selectorJSON" onchange="getJSONData()">
+				<option value="pokemon">Pokemon</option>
+				<option value="meteoritos">Meteoritos</option>
+				<option value="movies">Peliculas</option>
+				<option value="municipis">Municipios</option>
+			</select>
+		</div>
+		<div class="navMenu">
+			<button onclick="reloadPage()" class="iniciar">Iniciar</button>
+			<button class="ordenarAscendente" onclick="ordenar('asc')"  >Ordenar ASC</button>
+			<button class="ordenar descendente" onclick="ordenar('desc')"  >Ordenar DESC</button>
+			<button class="mediana" onclick="calcMitjana()">Mediana columna predeterminada</button>
+			<div id="contenedorBuscador">
+				<button class="buscador" onclick="abrirBuscador()">Buscador</button>
+				<input id="inputBuscador" type="text" value="" id="txtSearch" style="display:none;" />
+			</div>	
+		</div>
+	</div>
+	<div id="result"  ></div>
+
+
+	<script src="js/script.js" ></script>
 </body>
 </html>

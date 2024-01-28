@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size:2.3vh;
+    max-height: 100%;
+ 
+}
+.header{
+    display: flex;
+    height:20%;
+    width:100%;
+    align-items: center;
+    justify-content:space-around;
+}
+.selectorJSON{
+    display:flex;
+    height: 100%;
+    width:15%;
+    align-items: center;
+    justify-content: right;
+}
+select:hover{
+    cursor: pointer;
+}
+.selectorJSON > label,select{
+    margin:2%;
+}
+button:hover{
+    cursor:pointer;
+}
+
+.navMenu{
+    display:flex;
+    height:100%;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+}
+.navMenu > button{
+    border: 1px solid black;
+    width:calc(15% - 10px);
+    height:calc(35% - 10px);
+    margin:5px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 75%;
+    border: 1px solid #ddd;
+    overflow-y:scroll;
+  }
+  th{
+    background-color: rgb(102, 208, 212);
+  }
+  th, td {
+    width: 15%;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  #contenedorBuscador{
+    border: 0px solid black;
+    width:calc(15% - 10px);
+    height:calc(35% - 10px);
+    margin:5px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+
+  #contenedorBuscador > button {
+    width:100%;
+    height:100%;
+  }
+  #contenedorBuscador > input{
+    width:100%;
+
+  }
