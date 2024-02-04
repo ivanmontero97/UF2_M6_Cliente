@@ -5,21 +5,26 @@ html, body {
     height: 100%;
     font-size:2.3vh;
     max-height: 100%;
- 
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: blanchedalmond ;
 }
 .header{
     display: flex;
     height:20%;
     width:100%;
     align-items: center;
-    justify-content:space-around;
+    justify-content:center;
+    flex-direction: column;
 }
 .selectorJSON{
     display:flex;
     height: 100%;
-    width:15%;
+    width:35%;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 }
 select:hover{
     cursor: pointer;
@@ -39,29 +44,46 @@ button:hover{
     justify-content: center;
 }
 .navMenu > button{
-    border: 1px solid black;
     width:calc(15% - 10px);
-    height:calc(35% - 10px);
+    height:calc(55% - 10px);
     margin:5px;
     display: flex;
     justify-content:center;
     align-items: center;
+    border-radius: 10px ;
+}
+.resultWrapper{
+  width:95%;
 }
 #result{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-height:900px;
+    overflow-y: scroll;
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 75%;
-    border: 1px solid #ddd;
+     border: 1px solid #ddd; 
+     border-top:0px;
     overflow-y:scroll;
+    width: 100%;
   }
   th{
     background-color: rgb(102, 208, 212);
+    position: sticky;
+    top:0px;
+    
+  }
+  th > button {
+    background-color: rgb(102, 208, 212);
+    position: sticky;
+    top:0px;
+    width:100%;
+    height: 100%;
+    border:0px;
+    color: black;
+    font-size: 2vh;
   }
   th, td {
     width: 15%;
@@ -70,11 +92,12 @@ table {
   }
   
   tr:nth-child(even){background-color: #f2f2f2}
+  tr:nth-child(odd){background-color: white}
 
   #contenedorBuscador{
     border: 0px solid black;
     width:calc(15% - 10px);
-    height:calc(35% - 10px);
+    height:calc(55% - 10px);
     margin:5px;
     display: flex;
     justify-content:center;
@@ -84,8 +107,14 @@ table {
   #contenedorBuscador > button {
     width:100%;
     height:100%;
+    border-radius: 10px;
+
   }
   #contenedorBuscador > input{
     width:100%;
 
+  }
+  #inputBuscador{
+    border: 1px solid black;
+    width: 100%;
   }

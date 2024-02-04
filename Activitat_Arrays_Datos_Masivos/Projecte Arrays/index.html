@@ -7,6 +7,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="estilos.css">
 	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -23,14 +24,21 @@
 			<button onclick="reloadPage()" class="iniciar">Iniciar</button>
 			<button class="ordenarAscendente" onclick="ordenar('asc')"  >Ordenar ASC</button>
 			<button class="ordenar descendente" onclick="ordenar('desc')"  >Ordenar DESC</button>
-			<button class="mediana" onclick="calcMitjana()">Mediana columna predeterminada</button>
+			<button id="grafic" onclick="printGrafic()" style="display:none">Gráfico</button>
+			<button class="mediana" onclick="calcMitjana()">Mediana</button>
 			<div id="contenedorBuscador">
 				<button class="buscador" onclick="abrirBuscador()">Buscador</button>
 				<input id="inputBuscador" type="text" value="" id="txtSearch" style="display:none;" />
 			</div>	
 		</div>
 	</div>
-	<div id="result"  ></div>
+
+	<div class="resultWrapper">
+		<div id="result"></div>
+	</div>
+	<div class="chart-container" style="position: relative; width:700px">
+		<canvas id="myChart"></canvas>
+	</div>
 
 
 	<script src="js/script.js" ></script>
